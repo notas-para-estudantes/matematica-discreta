@@ -1,0 +1,70 @@
+/* ============================================================
+   AUTO-COLORAÇÃO MATEMÁTICA (THEME DRACULA ADAPTADO)
+   ============================================================ */
+
+/* --- 1. REGRAS GERAIS (O padrão de tudo) --- */
+
+/* Variáveis e Letras (x, y, n, a) -> Ciano Neon */
+mjx-mi {
+    color: #40e0d0 !important;
+}
+
+/* Números (1, 5, 0) -> Amarelo */
+mjx-mn {
+    color: #f1fa8c !important;
+}
+
+/* Operadores e Símbolos (+, -, =, sum) -> Laranja */
+mjx-mo, mjx-so {
+    color: #ffb86c !important;
+}
+
+/* Funções (sin, cos, log) e Textos -> Rosa */
+/* Pega texto normal ou identificadores que não são itálicos */
+mjx-mtext, mjx-mi:not([mathvariant="italic"]) {
+    color: #ff79c6 !important;
+}
+
+/* ============================================================
+   2. REGRAS DE CONTEXTO (Exceções para Índices e Expoentes)
+   ============================================================ */
+
+/* --- SUBSCRITOS / ÍNDICES (A parte de baixo: n-1) --- */
+/* Força TUDO (letras, números e operadores) dentro do índice a ser ROXO */
+/* SUBSCRITOS (A parte de baixo) - APENAS COR */
+mjx-msub > *:nth-child(2) mjx-mi,
+mjx-msub > *:nth-child(2) mjx-mn,
+mjx-msub > *:nth-child(2) mjx-mo,
+mjx-msub > *:nth-child(2) mjx-mtext,
+mjx-msubsup > *:nth-child(2) mjx-mi,
+mjx-msubsup > *:nth-child(2) mjx-mn,
+mjx-msubsup > *:nth-child(2) mjx-mo,
+mjx-msubsup > *:nth-child(2) mjx-mtext {
+    color: #bd93f9 !important; /* Roxo */
+}
+
+/* SOBRESCRITOS (A parte de cima) - APENAS COR */
+mjx-msup > *:nth-child(2) mjx-mi,
+mjx-msup > *:nth-child(2) mjx-mn,
+mjx-msup > *:nth-child(2) mjx-mo,
+mjx-msubsup > *:nth-child(3) mjx-mi,
+mjx-msubsup > *:nth-child(3) mjx-mn,
+mjx-msubsup > *:nth-child(3) mjx-mo {
+    color: #50fa7b !important; /* Verde */
+}
+
+/* --- B. SÓ TAMANHO (Aplica APENAS em blocos $$...$$) --- */
+/* Aqui usamos a classe .math-block antes para filtrar */
+
+.math-block mjx-msub > *:nth-child(2) *,
+.math-block mjx-msubsup > *:nth-child(2) * {
+    font-size: 0.9em !important;   /* <--- Mude esse valor para o de baixo */
+}
+
+/* --- 2. TAMANHO DO EXPOENTE/SOBRESCRITO (A parte de cima: 2) --- */
+/* Afeta: x^2  E TAMBÉM  x_n^2 (parte de cima) */
+.math-block mjx-msup > *:nth-child(2) *, 
+.math-block mjx-msubsup > *:nth-child(3) * {
+    /*  Mude esse valor para o de cima */
+    font-size: 0.9em !important;
+}

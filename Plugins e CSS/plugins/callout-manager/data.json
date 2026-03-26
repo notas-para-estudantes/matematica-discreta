@@ -1,0 +1,22 @@
+{
+  "callouts": {
+    "custom": [
+      "test"
+    ],
+    "settings": {
+      "test": [
+        {
+          "changes": {
+            "icon": "lucide-timer-reset",
+            "color": "68, 207, 110"
+          }
+        }
+      ]
+    }
+  },
+  "calloutDetection": {
+    "obsidian": true,
+    "theme": true,
+    "snippet": true
+  }
+}

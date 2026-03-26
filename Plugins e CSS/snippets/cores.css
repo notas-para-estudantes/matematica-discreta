@@ -1,0 +1,26 @@
+/* --- MATH JAX STYLING --- */
+
+/* 1. Fórmulas em Linha ($...$) */
+/* Deixa a fonte colorida para destacar do texto normal */
+.cm-s-obsidian span.cm-math, 
+.markdown-preview-view .math span {
+    color: #ffbd2e !important; /* Amarelo Ouro - Mude essa cor se quiser */
+}
+
+/* 2. Fórmulas de Bloco ($$...$$) */
+/* Cria uma caixa de destaque ao redor da fórmula */
+.math-block > mjx-container {
+    padding: 10px !important;
+    background-color: rgba(69, 182, 254, 0.1); /* Fundo Azulzinho transparente */
+    border: 1px solid rgba(69, 182, 254, 0.4); /* Borda Azul */
+    border-radius: 8px; /* Bordas arredondadas */
+    display: block;
+    text-align: center;
+
+    overflow-x: auto !important; /* Barra de rolagem (la ele) */
+}
+
+/* Ajuste fino para o modo de edição (Live Preview) */
+.cm-line:has(.cm-math) .math-block > mjx-container {
+    background-color: rgba(69, 182, 254, 0.1);
+}

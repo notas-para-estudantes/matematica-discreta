@@ -1,0 +1,26 @@
+@media print {
+    /* Força o fundo escuro em todo o documento */
+    body, .markdown-rendered, .print {
+        background-color: #1e1e1e !important;
+        color: #dcddde !important;
+        -webkit-print-color-adjust: exact !important; /* A chave mágica está aqui */
+        print-color-adjust: exact !important;
+    }
+
+    /* Garante que os títulos fiquem visíveis */
+    h1, h2, h3, h4, h5, h6 {
+        color: #ffffff !important;
+    }
+
+    /* Ajusta blocos de código e fórmulas LaTeX */
+    code, pre, .math {
+        background-color: #2e2e2e !important;
+        color: #e0e0e0 !important;
+    }
+    
+    /* Remove sombras que podem bugar no PDF */
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
