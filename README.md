@@ -35,4 +35,4 @@ Baseado no livro **Fundamentos Matemáticos para a Ciência da Computação** de
 
 ## 📄 Licença
 
-Este material está licenciado sob [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) — uso não comercial, crédito a **Ricardo Roque**.
+Este material está licenciado sob [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) — uso não comercial.
